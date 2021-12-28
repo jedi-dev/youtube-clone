@@ -1,0 +1,133 @@
+.header {
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: #FFFFFF;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+  a {
+    text-decoration: none;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    input {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 56px;
+    input {
+      width: 90px;
+      height: 20px;
+    }
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    .box__search {
+      width: 572px;
+      height: 40px;
+      border: 1px solid #cccccc;
+      input {
+        width: 528px;
+        height: 24px;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 7px 0 0 5px;
+      }
+    }
+    .btn__search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 64px;
+      height: 40px;
+      border: 1px solid #cccccc;
+      background: #f9f9f9;
+      input {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .btn__microphone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: #f9f9f9;
+      border-radius: 100%;
+      margin-left: 10px;
+      input {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    .icon__apps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      input {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .icon__settings {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      input {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .btn__log_in {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 105px;
+      height: 40px;
+      border: 1px solid #065fd4;
+      margin: 0 10px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      span {
+        text-transform: uppercase;
+        color: #065fd4;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
