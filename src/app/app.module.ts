@@ -7,6 +7,7 @@ import {HeaderModule} from './header/header.module';
 import {GuideModule} from './guide/guide.module';
 import {ContentsModule} from './contents/contents.module';
 import {InterestsFilterModule} from './shared/interests-filter/interests-filter.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {InterestsFilterModule} from './shared/interests-filter/interests-filter.
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     HeaderModule,
     GuideModule,
