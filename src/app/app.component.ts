@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {VideoService} from './shared/services/video.service';
-import {Observable} from 'rxjs';
-import {VideoInterface} from './shared/types/video.interface';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +7,8 @@ import {VideoInterface} from './shared/types/video.interface';
 })
 export class AppComponent implements OnInit {
 
-  videos: Observable<VideoInterface[]> | undefined
+    constructor() {}
 
-  constructor(private videoService: VideoService) {
-  }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-    this.videos = this.videoService.getVideo();
-  }
 }

@@ -1,0 +1,22 @@
+@mixin btn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #030303;
+  .image {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+  }
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &:hover {
+    background: #F2F2F2;
+  }
+}

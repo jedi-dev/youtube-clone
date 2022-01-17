@@ -12,7 +12,6 @@
 
 # profiling files
 chrome-profiler-events*.json
-src/environments/environment.ts
 
 # IDEs and editors
 /.idea
@@ -44,3 +43,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#environments
+/src/environments/environment.ts

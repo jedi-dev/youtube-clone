@@ -1,20 +1,170 @@
-<div class="contents">
-  <div class="container">
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
-    <div><img src="../../../../assets/video.jpg" alt="video"></div>
+<!--<div [ngClass]="{'overlay': voiceSearch === true}">-->
+  <div class="content" [ngClass]="{'content__min': sidebarMin === true}">
+    <div class="left-sidebar" [ngClass]="{'left-sidebar__min': sidebarMin === true}">
+      <div class="left-sidebar__content">
+        <div class="guide__section1">
+          <a routerLink="" class="guide__home btn" routerLinkActive="active">
+            <div class="guide__home_img image"></div>
+            <span>Главная</span>
+          </a>
+          <a class="guide__navigator btn" href="#">
+            <div class="guide__navigator_img image"></div>
+            <span>Навигатор</span>
+          </a>
+          <a class="guide__subscriptions btn" href="#">
+            <div class="guide__subscriptions_img image"></div>
+            <span>Подписки</span>
+          </a>
+        </div>
+        <div class="guide__section2">
+          <a class="guide__library btn" href="#">
+            <div class="guide__library_img image"></div>
+            <span>Библиотека</span>
+          </a>
+          <a class="guide__history btn" href="#">
+            <div class="guide__history_img image"></div>
+            <span>История</span>
+          </a>
+        </div>
+        <div class="guide__section3">
+          <p>Вы сможете ставить отметки "Нравится", писать комментарии и подписываться на каналы.</p>
+          <a href="#" class="btn__log_in">
+            <img src="assets/icons/log_in.svg" alt="log in">
+            <span>войти</span>
+          </a>
+        </div>
+        <div class="guide__section4">
+          <h3>Лучшее на YouTube</h3>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/wTjzxjbxztDnt98a6tOhqCTgD8F4Xbv6ig-O4sXkHKdRiek5jnVE2x3xP97kGx4NHACv9cxjxHQ=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>Музыка</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/c6omVwCRGLmV-C49Lv8suHjoKrXUvR9gOUbmHb8HBlRnpcRQNEBHpsdy2Kb3jV0XCK3b3ZN0HQ=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>Спорт</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/5oS3RQMExo7bLG6gss9dKwTfrIAO2cWfV3pG_CWkjzA68zmW84xexqVJe3XQbFpYmRTkZn21TQ=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>Видеоигры</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/6lo97rUTO7xhIBXZqLiaW2kA_eMBIEmqc27EqlKLyE4nAY-yzcKBG0Hs0YdUka3gJ629HcwgyzQ=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>Фильмы</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/R71nRxVlLnQs7DnQICeIzoaNrpDXxmhjq2ULvHSNeStICjFD5ygqyFvKxKyUivjah6rUlAFWlQY=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>Новости</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/8D6JlsnvwDZFMdcbjqVji82kggP3aXXbO-yBD0RFrKlp4G1zNt9wcqcVTSPnAI8GuUAbDYQwsg=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>Трансляции</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/ytc/AKedOLTxbphuw9Aq7H8iBIt2cEAmTjo4J9jJR2O5rPeiTQ=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>В центре внимания</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="https://yt3.ggpht.com/xIRX7eOS8qSFYQCVQM06jUiDFu3T3M6Z7dXR81nMeGrxCQGfowNoNkwRJB2LECEerb_fBGXN=s88-c-k-c0x00ffffff-no-rj" alt="music">
+            <span>Панорамные видео</span>
+          </a>
+        </div>
+        <div class="guide__section5">
+          <a class="btn" href="#">
+            <img class="image" src="assets/icons/plus.svg" alt="music">
+            <span>Каталог каналов</span>
+          </a>
+        </div>
+        <div class="guide__section6">
+          <h3>Другие возможности</h3>
+          <a class="btn" href="#">
+            <img class="image" src="assets/icons/premium.svg" alt="premium">
+            <span>YouTube Premium</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="assets/icons/broadcasts.svg" alt="broadcasts">
+            <span>Трансляции</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="assets/icons/gear.svg" alt="settings">
+            <span>Настройки</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="assets/icons/flag.svg" alt="flag">
+            <span>Жалобы</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="assets/icons/question.svg" alt="question">
+            <span>Справка</span>
+          </a>
+          <a class="btn" href="#">
+            <img class="image" src="assets/icons/review.svg" alt="review">
+            <span>Отправить отзыв</span>
+          </a>
+        </div>
+        <div class="guide__section7">
+          <div class="guide__section7_link">
+            <a href="#">О сервисе</a>
+            <a href="#">Прессе</a>
+            <a href="#">Авторские права</a>
+            <a href="#">Связаться с нами</a>
+          </div>
+          <div class="guide__section7_link">
+            <a href="#">Условия использования</a>
+            <a href="#">Правила и безопасность</a>
+            <a href="#">Как работает YouTube</a>
+          </div>
+          <div class="copyright">© 2022 Google LLC</div>
+        </div>
+      </div>
+    </div>
+<!--    <div [ngClass]="{'overlay': voiceSearch === true}">-->
+      <div class="interests-filter" [ngClass]="{'interests-filter__min': sidebarMin === true}">
+        <div class="container">
+          <button [ngClass]="'selected'">Все</button>
+          <button>Мультфильмы</button>
+          <button>Скетч-шоу</button>
+          <button>Анимация</button>
+          <button>Природа</button>
+          <button>Туризм</button>
+          <button>Кулинарные шоу</button>
+          <button>Домашние животные</button>
+          <button>Музыка</button>
+          <button>Экшен и приключения</button>
+          <button>Последние опубликованные видео</button>
+          <button>Сейчас в эфире</button>
+        </div>
+        <div class="interests-filter__next">
+          <div class="interests-filter__next_btn">
+            <input type="image" src="assets/icons/next.svg" alt="next">
+          </div>
+        </div>
+      </div>
+<!--    </div>-->
+    <div class="main">
+      <div class="media" *ngFor="let video of videos | async">
+        <a class="media__preview" href="#">
+          <img class="media__preview_img" [src]="video.thumbnails.medium.url" alt="preview">
+          <img class="media__preview_video" [src]="'assets/mqdefault_6s.webp'" alt="preview">
+        </a>
+        <div class="media__content">
+          <a href="#">
+            <div class="avatar" *ngFor="let avatar of header | async">
+              <img [src]="avatar.thumbnails.default.url" alt="avatar">
+            </div>
+          </a>
+          <a class="media-details" href="#">
+            <div class="media__title">
+              <span class="media__content_header">{{video.title}}</span>
+            </div>
+            <div class="channel__name">{{video.channelTitle}}</div>
+            <div class="channel__info">
+              <span>464 тыс. просмотров</span>
+              <span>•</span>
+              <span>{{amountDays(video.publishedAt)}} дней назад</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+<!--</div>-->
