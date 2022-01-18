@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
 
   background: var(--header-background-color);
   height: var(--header-height);
@@ -20,20 +20,7 @@
     align-items: center;
   }
   &__hamburger {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    input {
-      width: 24px;
-      height: 24px;
-    }
-    &:active {
-      background: #E8E8E8;
-      border: 1px solid #cccccc;
-    }
+    @include header-btn;
   }
   &__logo {
     display: flex;
@@ -94,58 +81,102 @@
       }
     }
     .btn__microphone {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      background: #f9f9f9;
-      border-radius: 50%;
+      @include header-btn;
       margin-left: 10px;
       flex: none;
-      input {
-        width: 24px;
-        height: 24px;
-      }
-      &:active {
-        background: #E8E8E8;
-        border: 1px solid #cccccc;
-      }
     }
   }
-  &__icons {
+  &__menu {
     display: flex;
     align-items: center;
-    .icon__apps {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      input {
-        width: 24px;
-        height: 24px;
-      }
-      &:active {
-        background: #E8E8E8;
-        border: 1px solid #cccccc;
+    .menu__apps {
+      @include header-btn;
+      position: relative;
+      .menu__apps-nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 42px;
+        right: 0;
+        width: 264px;
+        height: 211px;
+        background: #FFFFFF;
+
+        border-bottom: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+
+        .btn {
+          width: 264px;
+          @include btn;
+        }
+
+        &_tv {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding: 8px 0;
+          border-bottom: 1px solid #cccccc;
+        }
+        &_music {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding-top: 8px;
+        }
+        &_children {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #cccccc;
+        }
+        &_musicians {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding: 8px 0;
+        }
       }
     }
-    .icon__settings {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      input {
-        width: 24px;
-        height: 24px;
-      }
-      &:active {
-        background: #E8E8E8;
-        border: 1px solid #cccccc;
+    .menu__settings {
+      @include header-btn;
+      position: relative;
+      .menu__settings-nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 42px;
+        right: 0;
+        width: 298px;
+        height: 393px;
+        background: #FFFFFF;
+        z-index: 2;
+
+        border-bottom: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+
+        .btn {
+          width: 298px;
+          @include btn;
+          .arrow {
+            position: absolute;
+            right: 15px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &_keyboard {
+          padding-bottom: 10px;
+        }
+        &_safe-mode {
+          padding: 10px 0;
+          border-top: 1px solid #cccccc;
+        }
       }
     }
     .btn__log_in {
@@ -232,91 +263,6 @@
       width: 40px;
       height: 40px;
     }
-  }
-}
-
-.menu__apps {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  top: 43px;
-  right: 190px;
-  width: 264px;
-  height: 211px;
-  background: #FFFFFF;
-  z-index: 2;
-
-  border-bottom: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-
-  .btn {
-    width: 264px;
-    @include btn;
-  }
-
-  .menu__apps_tv {
-    display: flex;
-    align-items: center;
-    height: 56px;
-    padding: 8px 0;
-    border-bottom: 1px solid #cccccc;
-  }
-  .menu__apps_music {
-    display: flex;
-    align-items: center;
-    height: 56px;
-    padding-top: 8px;
-  }
-  .menu__apps_children {
-    display: flex;
-    align-items: center;
-    height: 56px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #cccccc;
-  }
-  .menu__apps_musicians {
-    display: flex;
-    align-items: center;
-    height: 56px;
-    padding: 8px 0;
-  }
-}
-
-.menu__settings {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  top: 43px;
-  right: 140px;
-  width: 298px;
-  height: 393px;
-  background: #FFFFFF;
-  z-index: 2;
-
-  border-bottom: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-
-  .btn {
-    width: 298px;
-    @include btn;
-    .arrow {
-      position: absolute;
-      right: 15px;
-      width: 24px;
-      height: 24px;
-    }
-  }
-
-  .menu__apps_keyboard {
-    padding-bottom: 10px;
-  }
-  .menu__apps_safe-mode {
-    padding: 10px 0;
-    border-top: 1px solid #cccccc;
   }
 }
 

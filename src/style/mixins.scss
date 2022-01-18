@@ -20,3 +20,20 @@
     background: #F2F2F2;
   }
 }
+
+@mixin header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  input {
+    width: 24px;
+    height: 24px;
+  }
+  &:active {
+    background: #E8E8E8;
+    border: 1px solid #cccccc;
+  }
+}
