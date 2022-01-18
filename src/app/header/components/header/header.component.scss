@@ -321,19 +321,9 @@
 }
 
 @media (max-width:550px){
-  .box__search {
-    display: none !important;
+  .header__search {
+    .box__search {
+      display: none;
+    }
   }
-}
-
-.overlay{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #d3d3d3;
-  opacity: 0.6;
-  transition: opacity 0.2s;
-  pointer-events: none;
 }
