@@ -1,34 +1,26 @@
+@import "../../../../style/mixins";
+
 .header {
-  width: 100%;
-  height: 56px;
   position: fixed;
   top: 0;
-  z-index: 100;
-  background: #FFFFFF;
+  left: 0;
+  right: 0;
+  z-index: 2;
 
-  .container {
+  background: var(--header-background-color);
+  height: var(--header-height);
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
-  }
-  a {
-    text-decoration: none;
   }
   &__nav {
     display: flex;
     align-items: center;
   }
   &__hamburger {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    input {
-      width: 24px;
-      height: 24px;
-    }
+    @include header-btn;
   }
   &__logo {
     display: flex;
@@ -43,18 +35,36 @@
   }
   &__search {
     display: flex;
+    justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    width: 35%;
     .box__search {
-      width: 572px;
+      display: flex;
+      width: 100%;
+      max-width: 572px;
       height: 40px;
       border: 1px solid #cccccc;
       input {
-        width: 528px;
-        height: 24px;
+        padding-left: 10px;
+        width: 100%;
+        display: block;
         border: none;
         font-size: 16px;
         font-weight: 400;
-        padding: 7px 0 0 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+      .keyboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
       }
     }
     .btn__search {
@@ -71,43 +81,102 @@
       }
     }
     .btn__microphone {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      background: #f9f9f9;
-      border-radius: 100%;
+      @include header-btn;
       margin-left: 10px;
-      input {
-        width: 24px;
-        height: 24px;
-      }
+      flex: none;
     }
   }
-  &__icons {
+  &__menu {
     display: flex;
     align-items: center;
-    .icon__apps {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      input {
-        width: 24px;
-        height: 24px;
+    .menu__apps {
+      @include header-btn;
+      position: relative;
+      .menu__apps-nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 42px;
+        right: 0;
+        width: 264px;
+        height: 211px;
+        background: #FFFFFF;
+
+        border-bottom: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+
+        .btn {
+          width: 264px;
+          @include btn;
+        }
+
+        &_tv {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding: 8px 0;
+          border-bottom: 1px solid #cccccc;
+        }
+        &_music {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding-top: 8px;
+        }
+        &_children {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #cccccc;
+        }
+        &_musicians {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          padding: 8px 0;
+        }
       }
     }
-    .icon__settings {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      input {
-        width: 24px;
-        height: 24px;
+    .menu__settings {
+      @include header-btn;
+      position: relative;
+      .menu__settings-nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 42px;
+        right: 0;
+        width: 298px;
+        height: 393px;
+        background: #FFFFFF;
+        z-index: 2;
+
+        border-bottom: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+
+        .btn {
+          width: 298px;
+          @include btn;
+          .arrow {
+            position: absolute;
+            right: 15px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &_keyboard {
+          padding-bottom: 10px;
+        }
+        &_safe-mode {
+          padding: 10px 0;
+          border-top: 1px solid #cccccc;
+        }
       }
     }
     .btn__log_in {
@@ -128,6 +197,79 @@
         font-size: 14px;
         font-weight: 500;
       }
+    }
+  }
+}
+
+.voice-search {
+  margin: 7px 0 0;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 33%;
+  width: 592px;
+  height: 400px;
+  padding: 0 0 16px 32px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #cccccc;
+  z-index: 3;
+  .voice-search__title {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #030303;
+  }
+  .voice-search__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    input {
+      width: 24px;
+      height: 24px;
+    }
+    &:active {
+      background: #E8E8E8;
+      border: 1px solid #cccccc;
+    }
+  }
+  .voice-search__text {
+    margin-top: 30px;
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #606060;
+  }
+  .voice-search__microphone {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    background: #d3d3d3;
+    border-radius: 50%;
+    flex: none;
+    input {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width:550px){
+  .header__search {
+    .box__search {
+      display: none;
     }
   }
 }

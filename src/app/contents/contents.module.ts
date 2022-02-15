@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContentsComponent } from './components/contents/contents.component';
+import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from '../app-routing.module';
 
 
 
@@ -9,7 +11,9 @@ import { ContentsComponent } from './components/contents/contents.component';
     ContentsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
   exports: [
     ContentsComponent

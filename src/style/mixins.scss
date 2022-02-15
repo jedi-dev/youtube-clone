@@ -1,0 +1,39 @@
+@mixin btn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #030303;
+  .image {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+  }
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &:hover {
+    background: #F2F2F2;
+  }
+}
+
+@mixin header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  input {
+    width: 24px;
+    height: 24px;
+  }
+  &:active {
+    background: #E8E8E8;
+    border: 1px solid #cccccc;
+  }
+}
