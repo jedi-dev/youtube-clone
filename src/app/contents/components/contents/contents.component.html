@@ -1,166 +1,30 @@
 <!--<div [ngClass]="{'overlay': voiceSearch === true}">-->
-  <div class="content" [ngClass]="{'content__min': sidebarMin === true}">
-    <div class="left-sidebar" [ngClass]="{'left-sidebar__min': sidebarMin === true}">
-      <div class="left-sidebar__content">
-        <div class="guide__section1">
-          <a routerLink="" class="guide__home btn" routerLinkActive="active">
-            <div class="guide__home_img image"></div>
-            <span>Главная</span>
-          </a>
-          <a class="guide__navigator btn" href="#">
-            <div class="guide__navigator_img image"></div>
-            <span>Навигатор</span>
-          </a>
-          <a class="guide__subscriptions btn" href="#">
-            <div class="guide__subscriptions_img image"></div>
-            <span>Подписки</span>
-          </a>
-        </div>
-        <div class="guide__section2">
-          <a class="guide__library btn" href="#">
-            <div class="guide__library_img image"></div>
-            <span>Библиотека</span>
-          </a>
-          <a class="guide__history btn" href="#">
-            <div class="guide__history_img image"></div>
-            <span>История</span>
-          </a>
-        </div>
-        <div class="guide__section3">
-          <p>Вы сможете ставить отметки "Нравится", писать комментарии и подписываться на каналы.</p>
-          <a href="#" class="btn__log_in">
-            <img src="assets/icons/log_in.svg" alt="log in">
-            <span>войти</span>
-          </a>
-        </div>
-        <div class="guide__section4">
-          <h3>Лучшее на YouTube</h3>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/music.jpg" alt="music">
-            <span>Музыка</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/sport.jpg" alt="sport">
-            <span>Спорт</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/video_games.jpg" alt="video_games">
-            <span>Видеоигры</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/films.jpg" alt="films">
-            <span>Фильмы</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/news.jpg" alt="news">
-            <span>Новости</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/broadcasts.jpg" alt="broadcasts">
-            <span>Трансляции</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/youtube.jpg" alt="centre">
-            <span>В центре внимания</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/panoramic_video.jpg" alt="panoramic_video">
-            <span>Панорамные видео</span>
-          </a>
-        </div>
-        <div class="guide__section5">
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/plus.svg" alt="music">
-            <span>Каталог каналов</span>
-          </a>
-        </div>
-        <div class="guide__section6">
-          <h3>Другие возможности</h3>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/premium.svg" alt="premium">
-            <span>YouTube Premium</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/broadcasts.svg" alt="broadcasts">
-            <span>Трансляции</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/gear.svg" alt="settings">
-            <span>Настройки</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/flag.svg" alt="flag">
-            <span>Жалобы</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/question.svg" alt="question">
-            <span>Справка</span>
-          </a>
-          <a class="btn" href="#">
-            <img class="image" src="assets/icons/review.svg" alt="review">
-            <span>Отправить отзыв</span>
-          </a>
-        </div>
-        <div class="guide__section7">
-          <div class="guide__section7_link">
-            <a href="#">О сервисе</a>
-            <a href="#">Прессе</a>
-            <a href="#">Авторские права</a>
-            <a href="#">Связаться с нами</a>
-          </div>
-          <div class="guide__section7_link">
-            <a href="#">Условия использования</a>
-            <a href="#">Правила и безопасность</a>
-            <a href="#">Как работает YouTube</a>
-          </div>
-          <div class="copyright">© 2022 Google LLC</div>
-        </div>
-      </div>
-    </div>
+<div class="content" [ngClass]="{'content__min': sidebarMin}">
+    <app-sidebar [sidebarMin]="sidebarMin"></app-sidebar>
 <!--    <div [ngClass]="{'overlay': voiceSearch === true}">-->
-      <div class="interests-filter" [ngClass]="{'interests-filter__min': sidebarMin === true}">
-        <div class="container">
-          <button class="interests-filter__btn" [ngClass]="'selected'">Все</button>
-          <button class="interests-filter__btn">Мультфильмы</button>
-          <button class="interests-filter__btn">Скетч-шоу</button>
-          <button class="interests-filter__btn">Анимация</button>
-          <button class="interests-filter__btn">Природа</button>
-          <button class="interests-filter__btn">Туризм</button>
-          <button class="interests-filter__btn">Кулинарные шоу</button>
-          <button class="interests-filter__btn">Домашние животные</button>
-          <button class="interests-filter__btn">Музыка</button>
-          <button class="interests-filter__btn">Экшен и приключения</button>
-          <button class="interests-filter__btn">Последние опубликованные видео</button>
-          <button class="interests-filter__btn">Сейчас в эфире</button>
-        </div>
-        <div class="interests-filter__next">
-          <div class="interests-filter__next_btn">
-            <input type="image" src="assets/icons/next.svg" alt="next">
-          </div>
-        </div>
-      </div>
+  <app-interests-filter [sidebarMin]="sidebarMin"></app-interests-filter>
 <!--    </div>-->
     <div class="main">
-      <div class="media" *ngFor="let video of videos | async">
+      <div class="media" *ngFor="let video of videos$ | async">
         <a class="media__preview" href="#">
-          <img class="media__preview_img" [src]="video.thumbnails.medium.url" alt="preview">
+          <img class="media__preview_img" [src]="video.snippet.thumbnails.medium.url" alt="preview">
           <img class="media__preview_video" [src]="'assets/mqdefault_6s.webp'" alt="preview">
         </a>
         <div class="media__content">
           <a href="#">
-            <div class="avatar" *ngFor="let avatar of header | async">
-              <img [src]="avatar.thumbnails.default.url" alt="avatar">
+            <div class="avatar">
+              <img src="https://yt3.ggpht.com/hz5OlkigG9D7UMEo3fiua0-VeE0aFcJz7sNiwgkiyzkT_cxckrr9F-HBlh58TG6rb7Vc1NCR=s68-c-k-c0x00ffffff-no-rj" alt="avatar">
             </div>
           </a>
           <a class="media-details" href="#">
             <div class="media__title">
-              <span class="media__content_header">{{video.title}}</span>
+              <span class="media__content_header">{{video.snippet.title}}</span>
             </div>
-            <div class="channel__name">{{video.channelTitle}}</div>
+            <div class="channel__name">{{video.snippet.channelTitle}}</div>
             <div class="channel__info">
-              <span>464 тыс. просмотров</span>
+              <span>{{video.statistics.viewCount}} просмотров</span>
               <span>•</span>
-              <span>{{amountDays(video.publishedAt)}} дней назад</span>
+              <span>{{amountDays(video.snippet.publishedAt)}} день назад</span>
             </div>
           </a>
         </div>

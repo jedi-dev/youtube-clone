@@ -3,7 +3,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class HeaderService {
+export class SidebarService {
   private sidebarMin: boolean = false
   onClick:EventEmitter<boolean> = new EventEmitter();
 

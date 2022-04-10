@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {HeaderService} from '../../../shared/services/header.service';
+import {SidebarService} from '../../../shared/services/sidebar.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,8 @@ import {HeaderService} from '../../../shared/services/header.service';
 })
 export class HeaderComponent implements OnInit {
 
-  @HostListener('document:click', ['$event']) onDocumentClick(event: MouseEvent) {
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
     this.menuApps = false
     this.menuSettings = false
     this.voiceSearch = false
@@ -17,14 +18,11 @@ export class HeaderComponent implements OnInit {
 
   menuApps: boolean = false
   menuSettings: boolean = false
-  sidebarMin: boolean = false
   voiceSearch: boolean = false
 
-  constructor(private headerService: HeaderService) { }
+  constructor(private sidebarService: SidebarService) { }
 
-  ngOnInit(): void {
-    this.headerService.onClick.subscribe(sidebar => this.sidebarMin = sidebar)
-  }
+  ngOnInit(): void { }
 
   showMenuApps(event: MouseEvent): void {
     this.menuApps = !this.menuApps
@@ -39,7 +37,7 @@ export class HeaderComponent implements OnInit {
   }
 
   showSidebarMin(): void {
-    this.headerService.showSidebarMin()
+    this.sidebarService.showSidebarMin()
   }
 
   showVoiceSearch(event: MouseEvent): void {

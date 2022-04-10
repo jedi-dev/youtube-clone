@@ -1,0 +1,22 @@
+<!--<div class="interests-filter">-->
+<div class="interests-filter" [ngClass]="{'interests-filter__min': sidebarMin}">
+  <div class="container">
+    <button class="interests-filter__btn" [ngClass]="'selected'">Все</button>
+    <button class="interests-filter__btn">Мультфильмы</button>
+    <button class="interests-filter__btn">Скетч-шоу</button>
+    <button class="interests-filter__btn">Анимация</button>
+    <button class="interests-filter__btn">Природа</button>
+    <button class="interests-filter__btn">Туризм</button>
+    <button class="interests-filter__btn">Кулинарные шоу</button>
+    <button class="interests-filter__btn">Домашние животные</button>
+    <button class="interests-filter__btn">Музыка</button>
+    <button class="interests-filter__btn">Экшен и приключения</button>
+    <button class="interests-filter__btn">Последние опубликованные видео</button>
+    <button class="interests-filter__btn">Сейчас в эфире</button>
+  </div>
+  <div class="interests-filter__next">
+    <div class="interests-filter__next_btn">
+      <input type="image" src="assets/icons/next.svg" alt="next">
+    </div>
+  </div>
+</div>
