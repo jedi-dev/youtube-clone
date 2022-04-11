@@ -1,9 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {VideoService} from '../../../shared/services/video.service';
 import {Observable, Subscription} from 'rxjs';
-import {VideoInterface} from '../../../shared/types/video.interface';
 import {SidebarService} from '../../../shared/services/sidebar.service';
-import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-contents',
@@ -18,9 +16,7 @@ export class ContentsComponent implements OnInit, OnDestroy {
   constructor(private videoService: VideoService, private sidebarService: SidebarService) { }
 
   ngOnInit(): void {
-    this.videos$ = this.videoService.getVideo().pipe(
-      map((response: any) => response.items.map((item: any) => item))
-    )
+    this.videos$ = this.videoService.getVideo()
     this.sidebarMinSubscription = this.sidebarService.onClick.subscribe(
       data => this.sidebarMin = data
     )

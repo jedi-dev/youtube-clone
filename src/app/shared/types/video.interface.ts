@@ -1,16 +1,16 @@
-import {ResourceIdInterface} from './resource-id.interface';
-import {ThumbnailsInterface} from './thumbnails.interface';
+import {SnippetInterface} from './snippet.interface';
+import {StatisticsInterface} from './statistics.interface';
+import {ContentDetailsInterface} from './content-details.interface';
 
 export interface VideoInterface {
-  channelId: string
-  channelTitle: string
-  description: string
-  playlistId: string
-  position: number
-  publishedAt: Date
-  resourceId: ResourceIdInterface
-  thumbnails: ThumbnailsInterface
-  title: string
-  videoOwnerChannelId: string
-  videoOwnerChannelTitle: string
+  items: [
+    {
+      contentDetails: ContentDetailsInterface
+      etag: string
+      id: string
+      kind: string
+      snippet: SnippetInterface
+      statistics: StatisticsInterface
+    }
+  ]
 }
