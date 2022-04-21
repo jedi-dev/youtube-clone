@@ -39,47 +39,6 @@
     align-items: center;
     box-sizing: border-box;
     width: 35%;
-    .box__search {
-      display: flex;
-      width: 100%;
-      max-width: 572px;
-      height: 40px;
-      border: 1px solid #cccccc;
-      input {
-        padding-left: 10px;
-        width: 100%;
-        display: block;
-        border: none;
-        font-size: 16px;
-        font-weight: 400;
-        &:focus {
-          outline: none;
-        }
-      }
-      a {
-        text-decoration: none;
-      }
-      .keyboard {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-      }
-    }
-    .btn__search {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 64px;
-      height: 40px;
-      border: 1px solid #cccccc;
-      background: #f9f9f9;
-      input {
-        width: 24px;
-        height: 24px;
-      }
-    }
     .btn__microphone {
       @include header-btn;
       margin-left: 10px;
@@ -262,14 +221,6 @@
     input {
       width: 40px;
       height: 40px;
-    }
-  }
-}
-
-@media (max-width:550px){
-  .header__search {
-    .box__search {
-      display: none;
     }
   }
 }

@@ -1,37 +1,22 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {VideoService} from '../../../shared/services/video.service';
-import {Observable, Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 import {SidebarService} from '../../../shared/services/sidebar.service';
+import {VideoInterface} from '../../../shared/types/video.interface';
 
 @Component({
   selector: 'app-contents',
   templateUrl: './contents.component.html',
   styleUrls: ['./contents.component.scss']
 })
-export class ContentsComponent implements OnInit, OnDestroy {
-  sidebarMin?: boolean
-  sidebarMinSubscription?: Subscription
-  videos$: Observable<any> | undefined
+export class ContentsComponent implements OnInit {
+  sidebarMin$: Observable<boolean> | undefined
+  videos$: Observable<VideoInterface[]> | undefined
 
   constructor(private videoService: VideoService, private sidebarService: SidebarService) { }
 
   ngOnInit(): void {
     this.videos$ = this.videoService.getVideo()
-    this.sidebarMinSubscription = this.sidebarService.onClick.subscribe(
-      data => this.sidebarMin = data
-    )
+    this.sidebarMin$ = this.sidebarService.getSidebarMin()
   }
-  ngOnDestroy() {
-    this.sidebarMinSubscription?.unsubscribe()
-  }
-
-  amountDays(dateSent: Date) {
-    const oneDay = 24 * 60 * 60 * 1000
-    const currentDate = new Date()
-    dateSent = new Date(dateSent)
-
-    return Math.floor((Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate())
-      - Date.UTC(dateSent.getFullYear(), dateSent.getMonth(), dateSent.getDate()) ) / oneDay)
-  }
-
 }

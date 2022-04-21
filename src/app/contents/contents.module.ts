@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from '../app-routing.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { InterestsFilterComponent } from './components/interests-filter/interests-filter.component';
+import { DateOfCreationPipe } from './components/contents/date-of-creation.pipe';
 
 
 
@@ -12,7 +13,8 @@ import { InterestsFilterComponent } from './components/interests-filter/interest
   declarations: [
     ContentsComponent,
     SidebarComponent,
-    InterestsFilterComponent
+    InterestsFilterComponent,
+    DateOfCreationPipe
   ],
   imports: [
     CommonModule,

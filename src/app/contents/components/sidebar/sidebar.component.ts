@@ -7,6 +7,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  @Input() sidebarMin: boolean | undefined
-
+  @Input() sidebarMin: boolean | null | undefined
 }

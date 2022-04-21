@@ -6,27 +6,27 @@ export interface ThumbnailsInterface {
   maxres: Maxres
 }
 
-export interface Default {
+interface Default {
   url: string
   width: number
   height: number
 }
-export interface Medium {
+interface Medium {
   url: string
   width: number
   height: number
 }
-export interface High {
+interface High {
   url: string
   width: number
   height: number
 }
-export interface Standard {
+interface Standard {
   url: string
   width: number
   height: number
 }
-export interface Maxres {
+interface Maxres {
   url: string
   width: number
   height: number

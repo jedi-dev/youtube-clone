@@ -1,0 +1,16 @@
+<div class="search__container">
+  <form class="box__search">
+    <div class="magnifier" *ngIf="magnifier">
+      <img src="assets/icons/magnifier.svg" alt="magnifier">
+    </div>
+    <input type="text" placeholder="Введите запрос" (focus)="showMagnifier()" (blur)="showMagnifier()">
+    <a href="#">
+      <div class="keyboard">
+        <img src="assets/icons/tia.png" alt="keyboard">
+      </div>
+    </a>
+  </form>
+  <div class="btn__search" title="Введите запрос">
+    <input type="image" src="assets/icons/magnifier.svg" alt="search">
+  </div>
+</div>

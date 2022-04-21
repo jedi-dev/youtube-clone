@@ -9,23 +9,13 @@
       </div>
     </div>
     <div class="header__search">
-      <form class="box__search">
-        <input type="text" placeholder="Введите запрос">
-        <a href="#">
-          <div class="keyboard">
-            <img src="assets/icons/tia.png" alt="keyboard">
-          </div>
-        </a>
-      </form>
-      <div class="btn__search">
-        <input type="image" src="assets/icons/magnifier.svg" alt="search">
-      </div>
-      <div class="btn__microphone" (click)="showVoiceSearch($event)">
+      <app-search></app-search>
+      <div class="btn__microphone" (click)="showVoiceSearch($event)" title="Голосовой поиск">
         <input type="image" src="assets/icons/microphone.svg" alt="microphone">
       </div>
     </div>
     <div class="header__menu">
-      <div class="menu__apps" (click)="showMenuApps($event)">
+      <div class="menu__apps" (click)="showMenuApps($event)" title="Приложения YouTube">
         <input type="image" src="assets/icons/apps.svg" alt="apps" [hidden]="menuApps">
         <input type="image" src="assets/icons/apps_active.svg" alt="apps" [hidden]="!menuApps">
         <div class="menu__apps-nav" *ngIf="menuApps" (click)="$event.stopPropagation()">
@@ -55,7 +45,7 @@
           </div>
         </div>
       </div>
-      <div class="menu__settings" (click)="showMenuSettings($event)">
+      <div class="menu__settings" (click)="showMenuSettings($event)" title="Настройки">
         <input type="image" src="assets/icons/settings.svg" alt="settings">
         <div class="menu__settings-nav" *ngIf="menuSettings" (click)="$event.stopPropagation()">
           <div class="menu__settings-nav_theme">

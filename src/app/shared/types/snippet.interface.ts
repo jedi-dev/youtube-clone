@@ -7,8 +7,14 @@ export interface SnippetInterface {
   defaultAudioLanguage: string
   description: string
   liveBroadcastContent: string
+  localized: LocalizedInterface
   tags: Array<string>
   publishedAt: Date
   thumbnails: ThumbnailsInterface
   title: string
+}
+
+interface LocalizedInterface {
+  title: string
+  description: string
 }

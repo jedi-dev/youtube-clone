@@ -6,6 +6,6 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./interests-filter.component.scss']
 })
 export class InterestsFilterComponent {
-  @Input() sidebarMin: boolean | undefined
+  @Input() sidebarMin: boolean | null | undefined
 
 }

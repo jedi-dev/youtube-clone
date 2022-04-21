@@ -1,15 +1,19 @@
-import {EventEmitter, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarService {
-  private sidebarMin: boolean = false
-  onClick:EventEmitter<boolean> = new EventEmitter();
+  public sidebarMin$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
 
   constructor() { }
+
   showSidebarMin(): void {
-    this.sidebarMin = !this.sidebarMin
-    this.onClick.emit(this.sidebarMin);
+    const data: boolean = !this.sidebarMin$.value
+    this.sidebarMin$.next(data)
+  }
+  getSidebarMin() {
+    return this.sidebarMin$.asObservable()
   }
 }
