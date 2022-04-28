@@ -9,6 +9,7 @@
   margin-top: var(--header-height);
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 2;
 
   &::-webkit-scrollbar {
     width: 12px;

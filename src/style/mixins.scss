@@ -22,9 +22,7 @@
 }
 
 @mixin header-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -36,4 +34,10 @@
     background: #E8E8E8;
     border: 1px solid #cccccc;
   }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

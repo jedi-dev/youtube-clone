@@ -8,13 +8,12 @@ import { InterestsFilterComponent } from './components/interests-filter/interest
 import { DateOfCreationPipe } from './components/contents/date-of-creation.pipe';
 
 
-
 @NgModule({
   declarations: [
     ContentsComponent,
     SidebarComponent,
     InterestsFilterComponent,
-    DateOfCreationPipe
+    DateOfCreationPipe,
   ],
   imports: [
     CommonModule,

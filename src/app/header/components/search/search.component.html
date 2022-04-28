@@ -1,9 +1,9 @@
 <div class="search__container">
-  <form class="box__search">
+  <form class="search__container_input">
     <div class="magnifier" *ngIf="magnifier">
       <img src="assets/icons/magnifier.svg" alt="magnifier">
     </div>
-    <input type="text" placeholder="Введите запрос" (focus)="showMagnifier()" (blur)="showMagnifier()">
+    <input appFocus type="text" placeholder="Введите запрос" (focus)="showMagnifier()" (blur)="showMagnifier()">
     <a href="#">
       <div class="keyboard">
         <img src="assets/icons/tia.png" alt="keyboard">

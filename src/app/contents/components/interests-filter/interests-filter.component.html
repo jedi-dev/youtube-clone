@@ -1,21 +1,26 @@
-<!--<div class="interests-filter">-->
 <div class="interests-filter" [ngClass]="{'interests-filter__min': sidebarMin}">
-  <div class="container">
-    <button class="interests-filter__btn" [ngClass]="'selected'">Все</button>
-    <button class="interests-filter__btn">Мультфильмы</button>
-    <button class="interests-filter__btn">Скетч-шоу</button>
-    <button class="interests-filter__btn">Анимация</button>
-    <button class="interests-filter__btn">Природа</button>
-    <button class="interests-filter__btn">Туризм</button>
-    <button class="interests-filter__btn">Кулинарные шоу</button>
-    <button class="interests-filter__btn">Домашние животные</button>
-    <button class="interests-filter__btn">Музыка</button>
-    <button class="interests-filter__btn">Экшен и приключения</button>
-    <button class="interests-filter__btn">Последние опубликованные видео</button>
-    <button class="interests-filter__btn">Сейчас в эфире</button>
+  <div #container class="slider-container">
+    <a href="#" class="interests-filter__btn" [ngClass]="'selected'">Все</a>
+    <a href="#" class="interests-filter__btn">Мультфильмы</a>
+    <a href="#" class="interests-filter__btn">Скетч-шоу</a>
+    <a href="#" class="interests-filter__btn">Анимация</a>
+    <a href="#" class="interests-filter__btn">Природа</a>
+    <a href="#" class="interests-filter__btn">Туризм</a>
+    <a href="#" class="interests-filter__btn">Недвижимость</a>
+    <a href="#" class="interests-filter__btn">Кулинарные шоу</a>
+    <a href="#" class="interests-filter__btn">Домашние животные</a>
+    <a href="#" class="interests-filter__btn">Музыка</a>
+    <a href="#" class="interests-filter__btn">Экшен и приключения</a>
+    <a href="#" class="interests-filter__btn">Последние опубликованные видео</a>
+    <a href="#" class="interests-filter__btn">Сейчас в эфире</a>
   </div>
-  <div class="interests-filter__next">
-    <div class="interests-filter__next_btn">
+  <div #prev class="interests-filter__prev">
+    <div class="interests-filter__prev_btn" (click)="btnPrev()">
+      <input type="image" src="assets/icons/previous.svg" alt="prev">
+    </div>
+  </div>
+  <div #next class="interests-filter__next">
+    <div class="interests-filter__next_btn" (click)="btnNext()">
       <input type="image" src="assets/icons/next.svg" alt="next">
     </div>
   </div>

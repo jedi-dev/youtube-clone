@@ -23,9 +23,7 @@
     @include header-btn;
   }
   &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     width: 120px;
     height: 56px;
     input {
@@ -34,11 +32,10 @@
     }
   }
   &__search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     box-sizing: border-box;
-    width: 35%;
+    width: 100%;
+    max-width: 728px;
     .btn__microphone {
       @include header-btn;
       margin-left: 10px;
