@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {SidebarService} from './shared/services/sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +8,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  sidebarMin$!: Observable<boolean>
 
-    constructor() {}
+    constructor(private sidebarService: SidebarService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sidebarMin$ = this.sidebarService.getSidebarMin()
+  }
 
 }

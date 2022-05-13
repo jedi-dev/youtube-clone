@@ -1,0 +1,16 @@
+<div class="search__container">
+  <form class="search__container_input" [formGroup]="form">
+    <div class="magnifier" *ngIf="magnifier">
+      <img src="../../../../../../assets/icons/magnifier.svg" alt="magnifier">
+    </div>
+    <input appFocus (showMagnifier)="showMagnifier($event)" [magnifier]="magnifier" type="text" placeholder="Введите запрос" formControlName="request">
+    <a href="#">
+      <div class="keyboard">
+        <img src="../../../../../../assets/icons/tia.png" alt="keyboard">
+      </div>
+    </a>
+  </form>
+  <button routerLink="search" class="btn__search" title="Введите запрос" [disabled]="form.invalid">
+    <input type="image" src="../../../../../../assets/icons/magnifier.svg" alt="search">
+  </button>
+</div>

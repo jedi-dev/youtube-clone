@@ -13,7 +13,7 @@ export class VideoService {
 
   constructor(private http: HttpClient) { }
 
- public getVideo(): Observable<VideoInterface[]> {
+ public getData(): Observable<VideoInterface[]> {
     const url = `${environment.BASE_URL}videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=DE&key=${environment.API_KEY}`;
 
     return this.http.get<AppStateInterface>(url).pipe(

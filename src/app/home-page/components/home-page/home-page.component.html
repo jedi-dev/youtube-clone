@@ -1,0 +1,30 @@
+<div class="content" [ngClass]="{'content__min': sidebarMin$ | async}">
+  <app-interests-filter [sidebarMin]="sidebarMin$ | async"></app-interests-filter>
+  <div class="main">
+    <div class="media" *ngFor="let video of videos$ | async">
+      <a class="media__preview" href="#">
+        <img class="media__preview_img" [src]="video.snippet.thumbnails.medium.url" alt="preview">
+        <img class="media__preview_video" [src]="'assets/mqdefault_6s.webp'" alt="preview">
+      </a>
+      <div class="media__content">
+        <a href="#">
+          <div class="avatar" title="{{video.snippet.channelTitle}}">
+            <img src="https://yt3.ggpht.com/hz5OlkigG9D7UMEo3fiua0-VeE0aFcJz7sNiwgkiyzkT_cxckrr9F-HBlh58TG6rb7Vc1NCR=s68-c-k-c0x00ffffff-no-rj" alt="avatar">
+          </div>
+        </a>
+        <a class="media-details" href="#">
+          <div class="media__title">
+            <span class="media__content_header" title="{{video.snippet.title}}">{{video.snippet.title}}</span>
+          </div>
+          <div class="channel__name" title="{{video.snippet.channelTitle}}">{{video.snippet.channelTitle}}</div>
+          <div class="channel__info">
+            <span>{{video.statistics.viewCount}} просмотров</span>
+            <span>•</span>
+            <span>{{video.snippet.publishedAt | dateOfCreation}} назад</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
