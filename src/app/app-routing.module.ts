@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'subscriptions', component: SubscriptionsPageComponent},
   {path: 'library', component: LibraryPageComponent},
   {path: 'history', component: HistoryPageComponent},
-  {path: 'video', component: VideoPageComponent},
+  {path: 'video/:id', component: VideoPageComponent},
 ];
 
 @NgModule({

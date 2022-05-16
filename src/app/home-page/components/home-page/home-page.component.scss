@@ -56,9 +56,7 @@
       padding-right: 24px;
 
       .avatar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center;
         width: 36px;
         height: 36px;
         border-radius: 50%;

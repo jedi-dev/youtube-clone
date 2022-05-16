@@ -6,6 +6,7 @@ import {AppRoutingModule} from '../app-routing.module';
 import { SidebarComponent } from '../shared/modules/sidebar/components/sidebar/sidebar.component';
 import { InterestsFilterComponent } from './components/interests-filter/interests-filter.component';
 import { DateOfCreationPipe } from './components/home-page/date-of-creation.pipe';
+import { VideoViewsPipe } from './components/home-page/video-views.pipe';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { DateOfCreationPipe } from './components/home-page/date-of-creation.pipe
     SidebarComponent,
     InterestsFilterComponent,
     DateOfCreationPipe,
+    VideoViewsPipe,
   ],
   imports: [
     CommonModule,

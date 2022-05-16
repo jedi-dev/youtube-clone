@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VideoPageComponent } from './components/video-page/video-page.component';
+import {YouTubePlayerModule} from '@angular/youtube-player';
 
 
 
@@ -9,7 +10,8 @@ import { VideoPageComponent } from './components/video-page/video-page.component
     VideoPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    YouTubePlayerModule
   ]
 })
 export class VideoPageModule { }

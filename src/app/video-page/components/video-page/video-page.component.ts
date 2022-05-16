@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-video-page',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-page.component.scss']
 })
 export class VideoPageComponent implements OnInit {
-
-  constructor() { }
+  id?: string
+  constructor(private readonly route: ActivatedRoute) {
+    this.id = route.snapshot.params['id']
+  }
 
   ngOnInit(): void {
   }

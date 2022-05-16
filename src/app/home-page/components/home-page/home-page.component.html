@@ -2,7 +2,7 @@
   <app-interests-filter [sidebarMin]="sidebarMin$ | async"></app-interests-filter>
   <div class="main">
     <div class="media" *ngFor="let video of videos$ | async">
-      <a class="media__preview" href="#">
+      <a class="media__preview" [routerLink]="['video', video.id]">
         <img class="media__preview_img" [src]="video.snippet.thumbnails.medium.url" alt="preview">
         <img class="media__preview_video" [src]="'assets/mqdefault_6s.webp'" alt="preview">
       </a>
@@ -12,13 +12,13 @@
             <img src="https://yt3.ggpht.com/hz5OlkigG9D7UMEo3fiua0-VeE0aFcJz7sNiwgkiyzkT_cxckrr9F-HBlh58TG6rb7Vc1NCR=s68-c-k-c0x00ffffff-no-rj" alt="avatar">
           </div>
         </a>
-        <a class="media-details" href="#">
+        <a class="media-details" [routerLink]="['video', video.id]">
           <div class="media__title">
             <span class="media__content_header" title="{{video.snippet.title}}">{{video.snippet.title}}</span>
           </div>
           <div class="channel__name" title="{{video.snippet.channelTitle}}">{{video.snippet.channelTitle}}</div>
           <div class="channel__info">
-            <span>{{video.statistics.viewCount}} просмотров</span>
+            <span>{{video.statistics.viewCount | videoViews}}</span>
             <span>•</span>
             <span>{{video.snippet.publishedAt | dateOfCreation}} назад</span>
           </div>
