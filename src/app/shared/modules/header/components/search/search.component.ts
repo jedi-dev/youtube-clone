@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {SearchService} from '../../../../services/search.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +12,12 @@ export class SearchComponent implements OnInit {
   form!: FormGroup
   magnifier: boolean = false
 
-  constructor(private fb: FormBuilder) { }
+
+  constructor(
+    private fb: FormBuilder,
+    private searchService: SearchService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -20,6 +27,11 @@ export class SearchComponent implements OnInit {
 
   showMagnifier(data: boolean): void {
     this.magnifier = data
+  }
+
+  getSearch(str: string): void {
+    this.searchService.getSearch(str)
+    this.router.navigate(['search'])
   }
 
 }

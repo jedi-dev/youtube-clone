@@ -1,1 +1,28 @@
-<p>search-page works!</p>
+<div class="search__content">
+  <div class="search__main">
+    <div class="search__media" *ngFor="let video of videos$ | async">
+      <a class="search__media_preview" [routerLink]="['video', video.id]">
+        <img [src]="video.snippet.thumbnails.medium.url" alt="preview">
+      </a>
+      <div class="search__media_content">
+        <a class="search__media_details" [routerLink]="['video', video.id]">
+          <div class="search__media_title" title="{{video.snippet.title}}">
+            {{video.snippet.title}}
+          </div>
+          <div class="search__channel_info">
+            {{video.snippet.publishedAt | dateOfCreation}} назад
+          </div>
+        </a>
+        <a class="channel" href="#">
+          <div class="channel__avatar" title="{{video.snippet.channelTitle}}">
+            <img src="https://yt3.ggpht.com/hz5OlkigG9D7UMEo3fiua0-VeE0aFcJz7sNiwgkiyzkT_cxckrr9F-HBlh58TG6rb7Vc1NCR=s68-c-k-c0x00ffffff-no-rj" alt="avatar">
+          </div>
+          <div class="channel__name" title="{{video.snippet.channelTitle}}">{{video.snippet.channelTitle}}</div>
+        </a>
+        <div class="search__description">{{video.snippet.description}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

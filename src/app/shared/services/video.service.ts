@@ -20,4 +20,11 @@ export class VideoService {
       map(response => response.items)
     )
   }
+  public getSearch(query: string): Observable<VideoInterface[]> {
+    const url = `${environment.BASE_URL}search?part=snippet&q=${query}&maxResults=5&regionCode=DE&key=${environment.API_KEY}`;
+
+    return this.http.get<AppStateInterface>(url).pipe(
+      map(response => response.items)
+    )
+  }
 }

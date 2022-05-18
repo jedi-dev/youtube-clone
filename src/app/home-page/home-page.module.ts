@@ -5,8 +5,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from '../app-routing.module';
 import { SidebarComponent } from '../shared/modules/sidebar/components/sidebar/sidebar.component';
 import { InterestsFilterComponent } from './components/interests-filter/interests-filter.component';
-import { DateOfCreationPipe } from './components/home-page/date-of-creation.pipe';
-import { VideoViewsPipe } from './components/home-page/video-views.pipe';
+import { DateOfCreationPipe } from '../shared/pipes/date-of-creation.pipe';
+import { VideoViewsPipe } from '../shared/pipes/video-views.pipe';
 
 
 @NgModule({
@@ -24,7 +24,9 @@ import { VideoViewsPipe } from './components/home-page/video-views.pipe';
   ],
   exports: [
     HomePageComponent,
-    SidebarComponent
+    SidebarComponent,
+    DateOfCreationPipe,
+    VideoViewsPipe
   ]
 })
 export class HomePageModule { }
