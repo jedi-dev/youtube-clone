@@ -3,9 +3,9 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  Input,
+  Input, QueryList,
   Renderer2,
-  ViewChild
+  ViewChild, ViewChildren
 } from '@angular/core';
 
 @Component({
@@ -23,11 +23,14 @@ export class InterestsFilterComponent implements AfterViewInit, AfterViewChecked
   @ViewChild('prev') prev?: ElementRef
   @ViewChild('next') next?: ElementRef
 
+  @ViewChildren('triggers') triggers?: QueryList<ElementRef>
+
   constructor(private renderer: Renderer2) { }
 
   ngAfterViewInit() {
     this.containerWidth = -(this.container?.nativeElement.clientWidth /
       this.container?.nativeElement.children.length)
+    this.renderer.addClass(this.triggers?.first.nativeElement, 'selected')
   }
   ngAfterViewChecked() {
     if (this.position === 0) {
@@ -46,6 +49,7 @@ export class InterestsFilterComponent implements AfterViewInit, AfterViewChecked
       this.renderer.removeStyle(
         this.next?.nativeElement,
         'display')
+
   }
 
   btnPrev(): void {
@@ -64,5 +68,13 @@ export class InterestsFilterComponent implements AfterViewInit, AfterViewChecked
     this.renderer.setStyle(
       this.container?.nativeElement,
       'transform', `translateX(${this.position}px)`)
+  }
+
+  activeBtn(event: Event): void {
+    event.preventDefault()
+    this.triggers?.forEach(item => {
+      this.renderer.removeClass(item.nativeElement, 'selected')
+    })
+    this.renderer.addClass(event.target, 'selected')
   }
 }

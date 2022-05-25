@@ -1,18 +1,18 @@
 <div class="interests-filter" [ngClass]="{'interests-filter__min': sidebarMin}">
   <div #container class="slider-container">
-    <a href="#" class="interests-filter__btn" [ngClass]="'selected'">Все</a>
-    <a href="#" class="interests-filter__btn">Мультфильмы</a>
-    <a href="#" class="interests-filter__btn">Скетч-шоу</a>
-    <a href="#" class="interests-filter__btn">Анимация</a>
-    <a href="#" class="interests-filter__btn">Природа</a>
-    <a href="#" class="interests-filter__btn">Туризм</a>
-    <a href="#" class="interests-filter__btn">Недвижимость</a>
-    <a href="#" class="interests-filter__btn">Кулинарные шоу</a>
-    <a href="#" class="interests-filter__btn">Домашние животные</a>
-    <a href="#" class="interests-filter__btn">Музыка</a>
-    <a href="#" class="interests-filter__btn">Экшен и приключения</a>
-    <a href="#" class="interests-filter__btn">Последние опубликованные видео</a>
-    <a href="#" class="interests-filter__btn">Сейчас в эфире</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Все</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Мультфильмы</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Скетч-шоу</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Анимация</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Природа</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Туризм</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Недвижимость</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Кулинарные шоу</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Домашние животные</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Музыка</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Экшен и приключения</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Последние опубликованные видео</a>
+    <a #triggers (click)="activeBtn($event)" href="#" class="interests-filter__btn">Сейчас в эфире</a>
   </div>
   <div #prev class="interests-filter__prev">
     <div class="interests-filter__prev_btn" (click)="btnPrev()">
